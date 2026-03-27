@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/textTransAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="+ $50.00" />
+
+        <TextView
+            android:id="@+id/textTransType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintBottom_toBottomOf="@id/textTransAmount"
+            app:layout_constraintStart_toEndOf="@id/textTransAmount"
+            app:layout_constraintTop_toTopOf="@id/textTransAmount"
+            tools:text="(Cash In)" />
+
+        <TextView
+            android:id="@+id/textTransDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Oct 24, 2023" />
+
+        <TextView
+            android:id="@+id/textTransDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?attr/textAppearanceBody2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTransAmount"
+            tools:text="Lunch payment" />
+
+        <TextView
+            android:id="@+id/textDueDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:textColor="@android:color/holo_orange_dark"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTransDescription"
+            tools:text="Due: Nov 01, 2023"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:textStyle="italic"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDueDate"
+            tools:text="Status: Pending"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
